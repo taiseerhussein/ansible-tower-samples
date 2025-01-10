@@ -4,13 +4,3 @@
     - name: Hello Message
       debug:
         msg: "Hello World!"
-    - name: "Create the content view - {{ cv.name }}"
-      redhat.satellite.content_view:
-        username: "admin"
-        password: "satdemo"
-        server_url: "https://ec2-18-117-238-216.us-east-2.compute.amazonaws.com/"
-        organization: "{{ sat_organization }}"
-        validate_certs: "{{ sat_validate_certs }}"
-        name: "{{ cv.name }}"
-        description: "{{ cv.desc }}"
-        repositories: "{{ cv.repositories }}"
